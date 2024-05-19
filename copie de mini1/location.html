@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: #00bfff;
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.title::before,
+.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: #00bfff;
+}
+
+
+
+
+
+        .form {
+            width: 60%;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 50px 30px;
+  background: #0b2447;
+  border-radius: 10px;
+  overflow: hidden;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transform: rotateX(-10deg);
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  animation: form-animation 0.5s ease-in-out;
+}
+
+@keyframes form-animation {
+  from {
+    transform: rotateX(-30deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.input {
+    width: 60%;
+
+  padding: 15px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transform-style: preserve-3d;
+  color: rgb(255, 255, 255);
+  border: 2px solid #3b8df2;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.input::placeholder {
+  color: #fff;
+}
+
+.input:hover,
+.input:focus {
+  border-color: #3b8df2;
+  background-color: transparent;
+  transform: scale(1.05) rotateY(20deg);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+button {
+    width: 60%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transform: rotateX(-50deg);
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+button:hover {
+  background-color: #0077be;
+  font-size: 17px;
+  transform: scale(1.05) rotateY(20deg) rotateX(10deg);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+
+
+.btn-67,
+.btn-67 *,
+.btn-67 :after,
+.btn-67 :before,
+.btn-67:after,
+.btn-67:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-67 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+
+.btn-67:disabled {
+  cursor: default;
+}
+.btn-67:-moz-focusring {
+  outline: auto;
+}
+.btn-67 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-67 [hidden] {
+  display: none;
+}
+.btn-67 {
+  box-shadow: inset 0 0 0 2px #fff;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  padding: 1.2rem 3rem;
+  position: relative;
+  text-transform: uppercase;
+  transition: color 0.1s linear;
+}
+.btn-67:hover {
+  color: #fff;
+  transition: color 0.1s linear 1s;
+}
+.btn-67:after,
+.btn-67:before {
+  content: "";
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+.btn-67:before {
+  border-right: var(--border);
+  border-top: var(--border);
+  left: 0;
+  top: 0;
+}
+.btn-67:hover:before {
+  --border: 4px solid #000000;
+  -webkit-animation: border-top-and-right 1s forwards;
+  animation: border-top-and-right 1s forwards;
+}
+.btn-67:after {
+  border-bottom: var(--border);
+  border-left: var(--border);
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.btn-67:hover:after {
+  --border: 4px solid #000;
+  -webkit-animation: border-bottom-and-left 1s 1s forwards;
+  animation: border-bottom-and-left 1s 1s forwards;
+}
+@-webkit-keyframes border-top-and-right {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  50% {
+    height: 0;
+    width: 100%;
+  }
+  to {
+    height: 100%;
+    width: 100%;
+  }
+}
+@keyframes border-top-and-right {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  50% {
+    height: 0;
+    width: 100%;
+  }
+  to {
+    height: 100%;
+    width: 100%;
+  }
+}
+@-webkit-keyframes border-bottom-and-left {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  50% {
+    height: 0;
+    width: 100%;
+  }
+  to {
+    height: 100%;
+    width: 100%;
+  }
+}
+@keyframes border-bottom-and-left {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  50% {
+    height: 0;
+    width: 100%;
+  }
+  to {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+
+    </style>
+</head>
+<body bgcolor="#0077be">
+  <button onclick="ouvrirFenetre()" class="btn-67" >- Afficher une liste des véhicules disponibles</button>
+
+    <script>
+        function ouvrirFenetre() {
+            var nouvelleFenetre = window.open('', '', 'width=700, height=700');
+
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var data = xhr.responseText;
+
+                    nouvelleFenetre.document.write('<html><head><title>Fenêtre</title></head><body bgcolor="#0077be">');
+                    nouvelleFenetre.document.write('<h1>la liste des véhicules disponibles :</h1>');
+                    nouvelleFenetre.document.write(data);
+                    nouvelleFenetre.document.write('</body></html>');
+                }
+            };
+            xhr.open("GET", "affichV.php", true);
+            xhr.send();
+        }
+    </script>
+    <form class="form" method="post" action="testl.php">
+      
+        <p class="title">Location </p>
+        <input type="number" class="input" placeholder="id de location" name="idLocation">
+        <input type="number" class="input" placeholder="id de client" name="idClient">
+        <input type="number" class="input" placeholder="id de vehicule" name="idVehicule">
+
+
+        <input type="date" class="input" placeholder="date de debut" name="dateDebut">
+        <input type="date" class="input" placeholder="date de fin" name="dateFin">
+
+          <input type="number" class="input" placeholder="prix total" name="prixTotal">
+      
+        <center><button>Submit</button></center>
+      </form>
+
+      
+</body>
+</html>
